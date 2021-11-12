@@ -9,6 +9,7 @@
 	<test  name="loginpage test ">
 		<classes>
 			<class name="testClasses.Tc_login_001" />
+			<class name="testClasses.Tc_NewCustomer_003" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

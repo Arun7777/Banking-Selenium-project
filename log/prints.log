@@ -1,0 +1,5 @@
+20:57:00.258 [main] INFO  testClasses.Tc_login_001 - Entered user id
+20:57:00.448 [main] INFO  testClasses.Tc_login_001 - Entered Password
+20:57:02.310 [main] ERROR testClasses.Tc_login_001 - Login failed
+20:57:02.321 [main] INFO  testClasses.Tc_login_001 - validating Title
+20:57:02.334 [main] ERROR testClasses.Tc_login_001 - Invalid title

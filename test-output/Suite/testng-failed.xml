@@ -6,10 +6,16 @@
   </listeners>
   <test thread-count="5" name="loginpage test (failed)">
     <classes>
+      <class name="testClasses.Tc_NewCustomer_003">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="addNewCustomer"/>
+        </methods>
+      </class> <!-- testClasses.Tc_NewCustomer_003 -->
       <class name="testClasses.Tc_login_001">
         <methods>
           <include name="setup"/>
-          <include name="validateTitle"/>
           <include name="login"/>
           <include name="teardown"/>
         </methods>

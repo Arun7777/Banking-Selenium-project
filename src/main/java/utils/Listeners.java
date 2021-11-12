@@ -1,11 +1,7 @@
 package utils;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -18,6 +14,10 @@ import com.aventstack.extentreports.Status;
 import base.Base;
 public class Listeners extends Base implements ITestListener {
 	
+	public Listeners() throws IOException {
+		super();
+	}
+
 	ExtentReports extent = CustomExtentReport.getReports();
 	ExtentTest test;
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
@@ -53,6 +53,8 @@ public class Listeners extends Base implements ITestListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		System.out.println("screenshot captured");
 
 		
 	}

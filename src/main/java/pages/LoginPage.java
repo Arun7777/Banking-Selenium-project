@@ -13,6 +13,8 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
+//	###########################variables#######################
+	
 	@FindBy(name = "uid")
 	WebElement userId;
 
@@ -25,6 +27,7 @@ public class LoginPage {
 	@FindBy(name = "btnReset")
 	WebElement resetButton;
 
+//	########################actions###########################
 
 	public void setUserId(String userid) {
 		userId.sendKeys(userid);
@@ -34,12 +37,16 @@ public class LoginPage {
 		password.sendKeys(pass);
 	}
 
-	public void clickLoginButton() {
+	public Homepage clickLoginButton() {
 		loginButton.click();
+		return new Homepage(driver);
 	}
 	public void clickResetButton() {
 		resetButton.click();
 	}
+	
+//	########################Validations#####################
+	
 	
 	public String validateTitle() {
 		return driver.getTitle();
