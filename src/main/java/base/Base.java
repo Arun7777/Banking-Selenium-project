@@ -11,10 +11,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverInfo;
 
 public class Base {
-	private WebDriver driver ;
-	private Properties prop;
+	public WebDriver driver ;
+	public Properties prop;
 	
 	public Properties propertyFile() {
 		prop = new Properties();
@@ -30,19 +32,27 @@ public class Base {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return prop;
-	
 	}
 	
-
-
-	public WebDriver initilize_driver() throws IOException{
+	
+	
+	public  WebDriver initializing_driver(){
+	
+		String browserName = propertyFile().getProperty("browserName");
 		
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\webdrivers\\chromedriver.exe");
-		driver  = new ChromeDriver();
-		driver.get(prop.getProperty("url"));
-		driver.manage().window().maximize();
+		if(browserName.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\webdrivers\\chromedriver.exe");
+			driver  = new ChromeDriver();
+			driver.get(prop.getProperty("url"));
+			driver.manage().window().maximize();
+			
+		}else if (browserName.equals("FF")) {
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\webdrivers\\geckodriver.exe");
+			driver  = new FirefoxDriver();
+			driver.get(prop.getProperty("url"));
+			driver.manage().window().maximize();		
+		}
 		return driver;
 	}
 

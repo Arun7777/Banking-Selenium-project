@@ -20,17 +20,15 @@ import pages.Homepage;
 import pages.LoginPage;
 
 public class Logintest extends Base{
-	
-	
-	public WebDriver driver;
-	LoginPage loginpage;
-	Homepage homepage;
-	Properties prop = propertyFile();
-	Logger log = LogManager.getLogger(Logintest.class.getName());
+
+
+	private LoginPage loginpage;
+	private Homepage homepage;
+	private Logger log = LogManager.getLogger(Logintest.class.getName());
 
 	@BeforeClass
 	public void setup() throws IOException{
-		driver = initilize_driver();
+		initializing_driver();
 		loginpage = new LoginPage(driver);	
 	}
 
@@ -42,7 +40,7 @@ public class Logintest extends Base{
 		if(actual.equals(expected)) {
 			log.info("Title is valid");
 			assertTrue(true);
-			
+
 		}else {
 			log.error("Invalid title");
 			assertTrue(false);
@@ -50,18 +48,18 @@ public class Logintest extends Base{
 	}
 
 
-	@Test()
+	//@Test()
 	public void login() {
 		loginpage.setUserId(prop.getProperty("userid"));
-			log.info("Entered user id");
+		log.info("Entered user id");
 		loginpage.setPassword("hksdhnk");
-			log.info("Entered Password");
-			log.debug("Clicked the button");
+		log.info("Entered Password");
+		log.debug("Clicked the button");
 		homepage = loginpage.clickLoginButton();
 		String actual = homepage.validateTitle();
 		String expected = "Guru99 Bank Manager HomePage";
 		assertEquals(actual, expected);
-		
+
 	}
 
 

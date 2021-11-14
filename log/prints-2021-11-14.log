@@ -1,8 +1,8 @@
-19:19:40.802 [main] INFO  testClasses.Logintest - validating Title
-19:19:40.825 [main] INFO  testClasses.Logintest - Title is valid
-19:25:09.950 [main] INFO  testClasses.Logintest - Entered user id
-19:25:10.083 [main] INFO  testClasses.Logintest - Entered Password
-19:25:13.809 [main] INFO  testClasses.Logintest - validating Title
-19:25:13.821 [main] INFO  testClasses.Logintest - Title is valid
-10:27:15.365 [main] INFO  testClasses.Logintest - Entered user id
-10:27:15.526 [main] INFO  testClasses.Logintest - Entered Password
+10:27:16.079 [main] INFO  testClasses.Logintest - validating Title
+10:27:17.749 [main] INFO  testClasses.Logintest - Title is valid
+14:16:41.926 [main] INFO  testClasses.Logintest - Entered user id
+14:16:41.980 [main] INFO  testClasses.Logintest - Entered Password
+14:16:42.689 [main] INFO  testClasses.Logintest - validating Title
+14:16:42.699 [main] ERROR testClasses.Logintest - Invalid title
+16:09:18.482 [main] INFO  testClasses.Logintest - validating Title
+16:09:18.493 [main] INFO  testClasses.Logintest - Title is valid

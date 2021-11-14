@@ -18,13 +18,11 @@ import pages.NewCustomer;
 
 public class NewCustomertest extends Base {
 
-	public WebDriver driver;
 	Homepage homepage;
-	Properties prop = propertyFile();
 
 	@BeforeClass
 	public void setup() throws IOException {
-		driver = initilize_driver();
+		initializing_driver();
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.setUserId(prop.getProperty("userid"));
 		loginpage.setPassword(prop.getProperty("password"));
