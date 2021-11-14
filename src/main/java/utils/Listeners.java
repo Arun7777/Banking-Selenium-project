@@ -13,10 +13,6 @@ import com.aventstack.extentreports.Status;
 
 import base.Base;
 public class Listeners extends Base implements ITestListener {
-	
-	public Listeners() throws IOException {
-		super();
-	}
 
 	ExtentReports extent = CustomExtentReport.getReports();
 	ExtentTest test;

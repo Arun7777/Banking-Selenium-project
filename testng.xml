@@ -8,8 +8,8 @@
 	
 	<test  name="loginpage test ">
 		<classes>
-			<class name="testClasses.Tc_login_001" />
-			<class name="testClasses.Tc_NewCustomer_003" />
+			<class name="testClasses.Logintest" />
+			<!-- <class name="testClasses.NewCustomertest" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

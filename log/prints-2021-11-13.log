@@ -1,0 +1,8 @@
+19:08:55.655 [main] INFO  testClasses.Logintest - Entered user id
+19:08:55.806 [main] INFO  testClasses.Logintest - Entered Password
+19:10:49.252 [main] INFO  testClasses.Logintest - Entered user id
+19:10:49.416 [main] INFO  testClasses.Logintest - Entered Password
+19:12:07.340 [main] INFO  testClasses.Logintest - validating Title
+19:12:07.359 [main] ERROR testClasses.Logintest - Invalid title
+19:19:40.242 [main] INFO  testClasses.Logintest - Entered user id
+19:19:40.398 [main] INFO  testClasses.Logintest - Entered Password

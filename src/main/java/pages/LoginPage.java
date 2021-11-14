@@ -40,6 +40,7 @@ public class LoginPage {
 	public Homepage clickLoginButton() {
 		loginButton.click();
 		return new Homepage(driver);
+		
 	}
 	public void clickResetButton() {
 		resetButton.click();
@@ -50,6 +51,10 @@ public class LoginPage {
 	
 	public String validateTitle() {
 		return driver.getTitle();
+	}
+	//
+	public String credential() {
+		return driver.switchTo().alert().getText();
 	}
 
 

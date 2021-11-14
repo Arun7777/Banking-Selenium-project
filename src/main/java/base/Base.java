@@ -13,10 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Base {
-	public static WebDriver driver ;
-	public Properties prop;
+	private WebDriver driver ;
+	private Properties prop;
 	
-	public Base() throws IOException {		
+	public Properties propertyFile() {
 		prop = new Properties();
 		FileInputStream file = null;
 		try {
@@ -24,14 +24,22 @@ public class Base {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		prop.load(file);
+		try {
+			prop.load(file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return prop;
+	
 	}
 	
 
 
 	public WebDriver initilize_driver() throws IOException{
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arun\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\webdrivers\\chromedriver.exe");
 		driver  = new ChromeDriver();
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
@@ -43,7 +51,6 @@ public class Base {
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 		String destinationFile = System.getProperty("user.dir")+"\\screenshot\\"+testMethodName+".png";
 		FileUtils.copyFile(source, new File(destinationFile));
-		System.out.println("captured screenshot");
 		return destinationFile;
 	}
 }
