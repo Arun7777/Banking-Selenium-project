@@ -48,7 +48,7 @@ public class Logintest extends Base{
 	}
 
 
-	//@Test()
+	@Test()
 	public void login() {
 		loginpage.setUserId(prop.getProperty("userid"));
 		log.info("Entered user id");

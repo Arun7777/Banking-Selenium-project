@@ -1,8 +1,0 @@
-20:31:07.427 [main] INFO  testClasses.Tc_login_001 - Entered user id
-20:31:07.568 [main] INFO  testClasses.Tc_login_001 - Entered Password
-20:31:08.186 [main] INFO  testClasses.Tc_login_001 - validating Title
-20:31:09.932 [main] INFO  testClasses.Tc_login_001 - Title is valid
-20:52:43.040 [main] INFO  testClasses.Tc_login_001 - validating Title
-20:52:43.058 [main] INFO  testClasses.Tc_login_001 - Title is valid
-20:54:54.869 [main] INFO  testClasses.Tc_login_001 - validating Title
-20:54:54.898 [main] INFO  testClasses.Tc_login_001 - Title is valid
